@@ -1,0 +1,28 @@
+development:
+  sessions:
+    default:
+      hosts:
+        - localhost:27017
+      database: mongoid2_test_development
+      # username: user
+      # password: password
+
+test:
+  sessions:
+    default:
+      hosts:
+        - localhost:27017
+      database: mongoid2_test_test
+      # username: user
+      # password: password
+
+
+# set these environment variables on your prod server
+production:
+  sessions:
+    default:
+      hosts:
+        - localhost:27017
+      database: mongoid2_test_production
+      # username: user
+      # password: password

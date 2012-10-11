@@ -13,6 +13,7 @@ class NewSubPolicy
   attr_accessible :name, :policy, :policy_domain, :attributes
 
   accepts_nested_attributes_for :policy, :policy_domain, :attributes
+
 end
 
 class NewPolicyDomain

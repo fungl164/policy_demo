@@ -1,0 +1,23 @@
+%h1 Listing new_sub_policies
+
+%table
+  %tr
+    %th Name
+    %th Payload
+    %th Policy
+    %th
+    %th
+    %th
+
+  - @new_sub_policies.each do |new_sub_policy|
+    %tr
+      %td= new_sub_policy.name
+      %td= new_sub_policy.payload
+      %td= new_sub_policy.policy
+      %td= link_to 'Show', new_sub_policy
+      %td= link_to 'Edit', edit_new_sub_policy_path(new_sub_policy)
+      %td= link_to 'Destroy', new_sub_policy, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New New sub policy', new_new_sub_policy_path

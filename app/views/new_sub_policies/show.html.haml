@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @new_sub_policy.name
+%p
+  %b Payload:
+  = @new_sub_policy.payload
+%p
+  %b Policy:
+  = @new_sub_policy.policy
+
+= link_to 'Edit', edit_new_sub_policy_path(@new_sub_policy)
+\|
+= link_to 'Back', new_sub_policies_path

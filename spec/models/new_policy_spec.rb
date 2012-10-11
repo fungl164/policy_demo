@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe NewPolicy do
   it { should have_fields(:name).of_type(String) }
+  
   it { should embed_many(:subpolicies).of_type(NewSubPolicy) }
 
   it { should allow_mass_assignment_of(:name) }

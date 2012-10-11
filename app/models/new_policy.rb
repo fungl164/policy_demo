@@ -6,9 +6,9 @@ class NewPolicy
 
   embeds_many :subpolicies, class_name: 'NewSubPolicy'
 
-  validates_presence_of :name
-  validates_uniqueness_of :name  
-  validates_format_of :name, with: /\A\w+\Z/
+  validates :name, :presence => true, :uniqueness => true, :format => { :with => /^[\w\-]+$/ }
 
   attr_accessible :name, :subpolicies
+
+  accepts_nested_attributes_for :subpolicies
 end

@@ -1,4 +1,8 @@
 Mongoid2Test::Application.routes.draw do
+  resources :new_sub_policies
+
+  resources :new_policies
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

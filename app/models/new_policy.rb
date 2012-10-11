@@ -6,7 +6,8 @@ class NewPolicy
 
   embeds_many :subpolicies, class_name: 'NewSubPolicy'
 
-  validates_presence_of :name, on: [:create, :update]  
+  validates_presence_of :name
+  validates_uniqueness_of :name  
   validates_format_of :name, with: /\A\w+\Z/
 
   attr_accessible :name, :subpolicies

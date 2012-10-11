@@ -1,0 +1,19 @@
+%h1 Listing new_policies
+
+%table
+  %tr
+    %th Name
+    %th
+    %th
+    %th
+
+  - @new_policies.each do |new_policy|
+    %tr
+      %td= new_policy.name
+      %td= link_to 'Show', new_policy
+      %td= link_to 'Edit', edit_new_policy_path(new_policy)
+      %td= link_to 'Destroy', new_policy, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New New policy', new_new_policy_path

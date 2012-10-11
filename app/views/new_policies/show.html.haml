@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @new_policy.name
+
+= link_to 'Edit', edit_new_policy_path(@new_policy)
+\|
+= link_to 'Back', new_policies_path
